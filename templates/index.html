@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Cliente</title>
+</head>
+<body>
+    <h1>Buscar Cliente por DNI</h1>
+    <form method="post">
+        <input type="text" name="dni" placeholder="Ingrese DNI" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if clientes %}
+        <h2>Resultados:</h2>
+        <ul>
+            {% for cliente in clientes %}
+                <li>
+                    {{ cliente.nombre }} {{ cliente.apellido }} - 
+                    <a href="{{ url_for('detalle', dni=cliente.dni) }}">Ver Detalle</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
