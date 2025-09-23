@@ -15,8 +15,8 @@
         <ul>
             {% for cliente in clientes %}
                 <li>
-                    {{ cliente.nombre }} {{ cliente.apellido }} - 
-                    <a href="{{ url_for('detalle', dni=cliente.dni) }}">Ver Detalle</a>
+                    {{ cliente['nombre'] }} {{ cliente['apellido'] }} - 
+                    <a href="{{ url_for('detalle', dni=cliente['dni']) }}">Ver Detalle</a>
                 </li>
             {% endfor %}
         </ul>
