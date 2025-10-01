@@ -10,15 +10,19 @@
         <button type="submit">Buscar</button>
     </form>
 
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+
     {% if clientes %}
         <h2>Resultados:</h2>
         <ul>
             {% for cliente in clientes %}
-                <li>
-                    {{ cliente['nombre'] }} {{ cliente['apellido'] }} - 
-                    <a href="{{ url_for('detalle', dni=cliente['dni']) }}">Ver Detalle</a>
-                </li>
-            {% endfor %}
+        <li>
+            {{ cliente['nombre'] }} {{ cliente['apellido'] }} -
+            <a href="{{ url_for('cliente', dni=cliente['dni']) }}">Ver Detalle</a>
+        </li>
+    {% endfor %}
         </ul>
     {% endif %}
 </body>
