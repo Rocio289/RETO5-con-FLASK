@@ -1,4 +1,4 @@
-# 🔎 Reto 5 Flask: Buscador de Clientes
+# 🔎 Reto 5 Flask y HTML: Buscador de Clientes
 
 
 Aplicación web desarrollada con **Flask** como parte del reto 5.  
